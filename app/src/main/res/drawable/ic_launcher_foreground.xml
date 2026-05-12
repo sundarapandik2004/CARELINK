@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- res/drawable/ic_launcher_foreground.xml -->
+<!-- Adaptive icon foreground — shows on home screen launcher -->
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="108dp"
+    android:height="108dp"
+    android:viewportWidth="108"
+    android:viewportHeight="108">
+
+    <!-- Outer circle ring -->
+    <path
+        android:pathData="M54,10 A44,44 0 1 1 53.99,10 Z"
+        android:strokeColor="#7C6FFF"
+        android:strokeWidth="2.5"
+        android:fillColor="@android:color/transparent"/>
+
+    <!-- Inner dashed ring (simplified as circle) -->
+    <path
+        android:pathData="M54,18 A36,36 0 1 1 53.99,18 Z"
+        android:strokeColor="#10B981"
+        android:strokeWidth="1"
+        android:fillColor="@android:color/transparent"/>
+
+    <!-- ECG / pulse line -->
+    <path
+        android:pathData="M18,54 L28,54 L32,42 L38,66 L43,49 L48,59 L54,54 L64,54 L68,45 L72,63 L76,54 L86,54"
+        android:strokeColor="#10B981"
+        android:strokeWidth="2.5"
+        android:fillColor="@android:color/transparent"
+        android:strokeLineCap="round"
+        android:strokeLineJoin="round"/>
+
+    <!-- Heart shape -->
+    <path
+        android:pathData="M54,65 C54,65 42,57 42,49 C42,44 46,41 50,42 C52,42 53,43 54,45 C55,43 56,42 58,42 C62,41 66,44 66,49 C66,57 54,65 54,65 Z"
+        android:fillColor="#EF4444"/>
+
+    <!-- Hand fingers (raised hand symbol at top) -->
+    <path
+        android:pathData="M47,28 L47,18 Q47,15 50,15 Q53,15 53,18 L53,28 Z"
+        android:fillColor="#F9A825"/>
+    <path
+        android:pathData="M50,26 L50,14 Q50,11 53,11 Q56,11 56,14 L56,26 Z"
+        android:fillColor="#F9A825"/>
+    <path
+        android:pathData="M53,26 L53,13 Q53,10 56,10 Q59,10 59,13 L59,26 Z"
+        android:fillColor="#F9A825"/>
+    <path
+        android:pathData="M56,27 L56,16 Q56,13 59,13 Q62,13 62,16 L62,27 Z"
+        android:fillColor="#F9A825"/>
+    <path
+        android:pathData="M44,32 L63,32 Q66,32 66,36 L66,38 Q66,40 63,40 L44,40 Q41,40 41,38 L41,36 Q41,32 44,32 Z"
+        android:fillColor="#F9A825"/>
+
+    <!-- Three dots at bottom -->
+    <path
+        android:pathData="M47,85 A3,3 0 1 1 46.99,85 Z"
+        android:fillColor="#EF4444"/>
+    <path
+        android:pathData="M54,85 A3,3 0 1 1 53.99,85 Z"
+        android:fillColor="#7C6FFF"/>
+    <path
+        android:pathData="M61,85 A3,3 0 1 1 60.99,85 Z"
+        android:fillColor="#10B981"/>
+
+</vector>

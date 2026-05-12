@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:background="#111827"
+    android:padding="24dp">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="REMINDER TITLE"
+        android:textSize="10sp"
+        android:textColor="#4B5563"
+        android:letterSpacing="0.1"
+        android:textStyle="bold"
+        android:layout_marginBottom="6dp"/>
+
+    <EditText
+        android:id="@+id/etCgReminderTitle"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:hint="e.g. Take Medicine"
+        android:textSize="15sp"
+        android:padding="12dp"
+        android:background="#0A0E1A"
+        android:textColor="#FFFFFF"
+        android:textColorHint="#4B5563"
+        android:layout_marginBottom="14dp"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="DESCRIPTION (optional)"
+        android:textSize="10sp"
+        android:textColor="#4B5563"
+        android:letterSpacing="0.1"
+        android:textStyle="bold"
+        android:layout_marginBottom="6dp"/>
+
+    <EditText
+        android:id="@+id/etCgReminderDesc"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:hint="e.g. 2 tablets after food"
+        android:textSize="15sp"
+        android:padding="12dp"
+        android:background="#0A0E1A"
+        android:textColor="#FFFFFF"
+        android:textColorHint="#4B5563"
+        android:layout_marginBottom="16dp"/>
+
+    <!-- Time picker row -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:background="#0A0E1A"
+        android:padding="12dp"
+        android:layout_marginBottom="14dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="⏰"
+            android:textSize="18sp"
+            android:layout_marginEnd="10dp"/>
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Reminder time"
+            android:textSize="14sp"
+            android:textColor="#6B7280"/>
+
+        <TextView
+            android:id="@+id/tvCgReminderTime"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="08:00 AM"
+            android:textSize="15sp"
+            android:textColor="#7C6FFF"
+            android:textStyle="bold"
+            android:layout_marginEnd="10dp"/>
+
+        <Button
+            android:id="@+id/btnCgSetTime"
+            android:layout_width="wrap_content"
+            android:layout_height="36dp"
+            android:text="Change"
+            android:textSize="12sp"
+            android:textColor="#FFFFFF"
+            android:backgroundTint="#1A1633"
+            app:cornerRadius="8dp"/>
+    </LinearLayout>
+
+    <!-- Repeat daily checkbox -->
+    <CheckBox
+        android:id="@+id/cbCgRepeat"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Repeat daily"
+        android:textSize="14sp"
+        android:textColor="#D1D5DB"
+        android:buttonTint="#7C6FFF"
+        android:layout_marginBottom="4dp"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="ℹ️  This reminder will appear on the user's phone automatically."
+        android:textSize="12sp"
+        android:textColor="#4B5563"
+        android:layout_marginTop="4dp"/>
+
+</LinearLayout>

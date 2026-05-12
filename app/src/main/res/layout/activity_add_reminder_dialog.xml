@@ -1,0 +1,163 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:background="#111827"
+    android:padding="24dp">
+
+    <!-- Title -->
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="New Reminder"
+        android:textSize="22sp"
+        android:textColor="#FFFFFF"
+        android:textStyle="bold"
+        android:layout_marginBottom="4dp"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Set a time-based alert"
+        android:textSize="13sp"
+        android:textColor="#6B7280"
+        android:layout_marginBottom="20dp"/>
+
+    <!-- Title field label -->
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="TITLE"
+        android:textSize="10sp"
+        android:textColor="#6B7280"
+        android:textStyle="bold"
+        android:letterSpacing="0.12"
+        android:layout_marginBottom="6dp"/>
+
+    <EditText
+        android:id="@+id/etTitle"
+        android:layout_width="match_parent"
+        android:layout_height="52dp"
+        android:hint="e.g. Take Medicine"
+        android:textSize="16sp"
+        android:padding="14dp"
+        android:background="#0A0E1A"
+        android:textColor="#FFFFFF"
+        android:textColorHint="#4B5563"
+        android:inputType="textCapSentences"
+        android:layout_marginBottom="14dp"/>
+
+    <!-- Description field label -->
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="DESCRIPTION (optional)"
+        android:textSize="10sp"
+        android:textColor="#6B7280"
+        android:textStyle="bold"
+        android:letterSpacing="0.12"
+        android:layout_marginBottom="6dp"/>
+
+    <EditText
+        android:id="@+id/etDescription"
+        android:layout_width="match_parent"
+        android:layout_height="52dp"
+        android:hint="e.g. 2 tablets after food"
+        android:textSize="16sp"
+        android:padding="14dp"
+        android:background="#0A0E1A"
+        android:textColor="#FFFFFF"
+        android:textColorHint="#4B5563"
+        android:inputType="textCapSentences"
+        android:layout_marginBottom="16dp"/>
+
+    <!-- Time picker row -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:background="#0A0E1A"
+        android:padding="14dp"
+        android:layout_marginBottom="16dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="⏰"
+            android:textSize="20sp"
+            android:layout_marginEnd="10dp"/>
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Reminder time"
+            android:textSize="14sp"
+            android:textColor="#9CA3AF"/>
+
+        <TextView
+            android:id="@+id/tvTime"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="10:00 AM"
+            android:textSize="16sp"
+            android:textColor="#7C6FFF"
+            android:textStyle="bold"
+            android:layout_marginEnd="12dp"/>
+
+        <Button
+            android:id="@+id/btnSetTime"
+            android:layout_width="wrap_content"
+            android:layout_height="36dp"
+            android:text="Change"
+            android:textSize="13sp"
+            android:textColor="#FFFFFF"
+            android:backgroundTint="#1A1633"
+            app:cornerRadius="8dp"/>
+    </LinearLayout>
+
+    <!-- Medication checkbox -->
+    <CheckBox
+        android:id="@+id/cbMedication"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="This is a Medication Reminder"
+        android:textSize="15sp"
+        android:textColor="#D1D5DB"
+        android:buttonTint="#F59E0B"
+        android:layout_marginBottom="24dp"/>
+
+    <!-- Action buttons -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/btnCancel"
+            android:layout_width="0dp"
+            android:layout_height="52dp"
+            android:layout_weight="1"
+            android:text="Cancel"
+            android:textSize="15sp"
+            android:textColor="#9CA3AF"
+            android:backgroundTint="#0A0E1A"
+            android:layout_marginEnd="8dp"
+            app:cornerRadius="12dp"/>
+
+        <Button
+            android:id="@+id/btnSave"
+            android:layout_width="0dp"
+            android:layout_height="52dp"
+            android:layout_weight="1"
+            android:text="Save"
+            android:textSize="15sp"
+            android:textColor="#FFFFFF"
+            android:backgroundTint="#7C6FFF"
+            app:cornerRadius="12dp"/>
+    </LinearLayout>
+
+</LinearLayout>

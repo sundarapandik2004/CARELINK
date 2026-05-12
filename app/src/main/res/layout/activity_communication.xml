@@ -1,0 +1,246 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="?android:attr/colorBackground">
+
+    <!-- ── Header ── -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:paddingStart="24dp"
+        android:paddingEnd="24dp"
+        android:paddingTop="48dp"
+        android:paddingBottom="20dp"
+        android:background="?attr/colorSurface">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="💬  Communication Aid"
+            android:textSize="26sp"
+            android:textColor="?attr/colorOnSurface"
+            android:textStyle="bold"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Speak or type — we handle the rest"
+            android:textSize="14sp"
+            android:textColor="?attr/colorOnSurface"
+            android:layout_marginTop="4dp"/>
+    </LinearLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:fillViewport="true">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="20dp">
+
+            <!-- ── Text input ── -->
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:cardCornerRadius="20dp"
+                app:cardElevation="0dp"
+                android:layout_marginBottom="20dp"
+                app:cardBackgroundColor="?attr/colorSurface">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="20dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="YOUR MESSAGE"
+                        android:textSize="11sp"
+                        android:textColor="?attr/colorPrimary"
+                        android:textStyle="bold"
+                        android:letterSpacing="0.1"
+                        android:layout_marginBottom="12dp"/>
+
+                    <EditText
+                        android:id="@+id/etInputText"
+                        android:layout_width="match_parent"
+                        android:layout_height="140dp"
+                        android:hint="Type your message here..."
+                        android:textSize="17sp"
+                        android:padding="14dp"
+                        android:background="?android:attr/colorBackground"
+                        android:gravity="top|start"
+                        android:textColor="?attr/colorOnSurface"
+                        android:textColorHint="?attr/colorOnSurface"
+                        android:inputType="textMultiLine"
+                        android:maxLines="6"/>
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+
+            <!-- ── Mic section ── -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:gravity="center"
+                android:layout_marginBottom="20dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="TAP TO SPEAK"
+                    android:textSize="11sp"
+                    android:textColor="?attr/colorOnSurface"
+                    android:letterSpacing="0.15"
+                    android:layout_marginBottom="16dp"/>
+
+                <!-- Mic button + pulse ring stacked in FrameLayout -->
+                <FrameLayout
+                    android:layout_width="120dp"
+                    android:layout_height="120dp"
+                    android:layout_gravity="center">
+
+                    <!-- Pulse ring — shown and animated while recording -->
+                    <View
+                        android:id="@+id/micPulseRing"
+                        android:layout_width="120dp"
+                        android:layout_height="120dp"
+                        android:background="@drawable/mic_pulse_ring"
+                        android:layout_gravity="center"
+                        android:visibility="invisible"
+                        android:alpha="0.6"/>
+
+                    <!-- Actual mic button -->
+                    <FrameLayout
+                        android:id="@+id/btnMicFrame"
+                        android:layout_width="100dp"
+                        android:layout_height="100dp"
+                        android:layout_gravity="center"
+                        android:clickable="true"
+                        android:focusable="true"
+                        android:background="@drawable/mic_button_bg">
+
+                        <TextView
+                            android:id="@+id/btnMic"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:text="🎤"
+                            android:textSize="38sp"/>
+                    </FrameLayout>
+                </FrameLayout>
+
+                <!-- Live recording indicator -->
+                <TextView
+                    android:id="@+id/tvListeningStatus"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text=""
+                    android:textSize="13sp"
+                    android:textColor="#EF4444"
+                    android:textStyle="bold"
+                    android:layout_marginTop="12dp"
+                    android:letterSpacing="0.05"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Tap again to stop"
+                    android:textSize="12sp"
+                    android:textColor="?attr/colorOnSurface"
+                    android:layout_marginTop="4dp"/>
+            </LinearLayout>
+
+            <!-- ── TTS action buttons ── -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginBottom="20dp">
+
+                <Button
+                    android:id="@+id/btnSpeak"
+                    android:layout_width="0dp"
+                    android:layout_height="56dp"
+                    android:layout_weight="1"
+                    android:text="🔊  Speak"
+                    android:textSize="15sp"
+                    android:textColor="?attr/colorOnSurface"
+                    android:backgroundTint="?attr/colorPrimary"
+                    android:layout_marginEnd="8dp"
+                    app:cornerRadius="14dp"/>
+
+                <Button
+                    android:id="@+id/btnListen"
+                    android:layout_width="0dp"
+                    android:layout_height="56dp"
+                    android:layout_weight="1"
+                    android:text="👂  Read Back"
+                    android:textSize="15sp"
+                    android:textColor="?attr/colorOnSurface"
+                    android:backgroundTint="#10B981"
+                    app:cornerRadius="14dp"/>
+            </LinearLayout>
+
+            <!-- ── Result box ── -->
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:cardCornerRadius="20dp"
+                app:cardElevation="0dp"
+                android:layout_marginBottom="16dp"
+                app:cardBackgroundColor="?attr/colorSurface">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="20dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="SPEECH RESULT"
+                        android:textSize="11sp"
+                        android:textColor="#10B981"
+                        android:textStyle="bold"
+                        android:letterSpacing="0.1"
+                        android:layout_marginBottom="12dp"/>
+
+                    <TextView
+                        android:id="@+id/tvSpeechResult"
+                        android:layout_width="match_parent"
+                        android:layout_height="100dp"
+                        android:padding="14dp"
+                        android:background="?android:attr/colorBackground"
+                        android:textSize="16sp"
+                        android:textColor="?attr/colorOnSurface"
+                        android:text="Your speech will appear here..."
+                        android:gravity="top|start"/>
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+
+            <!-- ── Clear ── -->
+            <Button
+                android:id="@+id/btnClear"
+                android:layout_width="match_parent"
+                android:layout_height="52dp"
+                android:text="🗑️  Clear All"
+                android:textSize="15sp"
+                android:textColor="?attr/colorOnSurface"
+                android:backgroundTint="?attr/colorSurfaceVariant"
+                app:cornerRadius="14dp"/>
+
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

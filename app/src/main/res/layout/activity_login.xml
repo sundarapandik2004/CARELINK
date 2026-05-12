@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:gravity="center"
+    android:background="?android:attr/colorBackground"
+    android:padding="28dp">
+
+    <!-- App badge -->
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="  CARELINK  "
+        android:textSize="11sp"
+        android:textColor="?attr/colorPrimary"
+        android:textStyle="bold"
+        android:background="?attr/colorPrimaryContainer"
+        android:paddingVertical="6dp"
+        android:paddingHorizontal="12dp"
+        android:letterSpacing="0.2"
+        android:layout_marginBottom="28dp"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Welcome Back"
+        android:textSize="32sp"
+        android:textColor="?attr/colorOnBackground"
+        android:textStyle="bold"
+        android:layout_marginBottom="8dp"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Sign in to continue"
+        android:textSize="14sp"
+        android:textColor="?attr/colorOnSurface"
+        android:alpha="0.5"
+        android:layout_marginBottom="36dp"/>
+
+    <!-- Email label -->
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="EMAIL"
+        android:textSize="11sp"
+        android:textColor="?attr/colorOnSurface"
+        android:alpha="0.5"
+        android:letterSpacing="0.1"
+        android:textStyle="bold"
+        android:layout_marginBottom="6dp"/>
+
+    <!-- Email input -->
+    <EditText
+        android:id="@+id/etEmail"
+        android:layout_width="match_parent"
+        android:layout_height="54dp"
+        android:hint="you@example.com"
+        android:textSize="16sp"
+        android:padding="14dp"
+        android:background="?attr/colorSurface"
+        android:textColor="?attr/colorOnSurface"
+        android:textColorHint="?attr/colorOnSurface"
+        android:inputType="textEmailAddress"
+        android:layout_marginBottom="14dp"/>
+
+    <!-- Password label -->
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="PASSWORD"
+        android:textSize="11sp"
+        android:textColor="?attr/colorOnSurface"
+        android:alpha="0.5"
+        android:letterSpacing="0.1"
+        android:textStyle="bold"
+        android:layout_marginBottom="6dp"/>
+
+    <!-- Password input -->
+    <EditText
+        android:id="@+id/etPassword"
+        android:layout_width="match_parent"
+        android:layout_height="54dp"
+        android:hint="Your password"
+        android:textSize="16sp"
+        android:padding="14dp"
+        android:background="?attr/colorSurface"
+        android:textColor="?attr/colorOnSurface"
+        android:textColorHint="?attr/colorOnSurface"
+        android:inputType="textPassword"
+        android:layout_marginBottom="16dp"/>
+
+    <!-- Remember me -->
+    <CheckBox
+        android:id="@+id/cbRememberMe"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Keep me logged in"
+        android:textSize="14sp"
+        android:textColor="?attr/colorOnSurface"
+        android:buttonTint="?attr/colorPrimary"
+        android:layout_marginBottom="24dp"/>
+
+    <!-- Progress -->
+    <ProgressBar
+        android:id="@+id/progressBar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:visibility="gone"
+        android:layout_marginBottom="12dp"/>
+
+    <!-- Sign In button -->
+    <Button
+        android:id="@+id/btnLogin"
+        android:layout_width="match_parent"
+        android:layout_height="56dp"
+        android:text="Sign In"
+        android:textSize="17sp"
+        android:textColor="?attr/colorOnPrimary"
+        android:textStyle="bold"
+        android:backgroundTint="?attr/colorPrimary"
+        android:layout_marginBottom="14dp"
+        app:cornerRadius="14dp"/>
+
+    <!-- Register link -->
+    <Button
+        android:id="@+id/btnGoRegister"
+        android:layout_width="match_parent"
+        android:layout_height="52dp"
+        android:text="Don't have an account? Register"
+        android:textSize="14sp"
+        android:textColor="?attr/colorPrimary"
+        android:backgroundTint="?attr/colorPrimaryContainer"
+        app:cornerRadius="14dp"/>
+
+</LinearLayout>
